@@ -1,0 +1,11 @@
+
+<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport" #scroller>  
+    <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+    <span class="wrapper">
+        <ng-container *cdkVirtualFor="let item of data">
+            <ng-container *ngTemplateOutlet="scrollItemTemplate, context: { $implicit: item }"></ng-container>
+        </ng-container>  
+    </span>    
+    <ng-container *ngTemplateOutlet="footerTemplate"></ng-container> 
+  </cdk-virtual-scroll-viewport>
+
