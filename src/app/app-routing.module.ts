@@ -5,8 +5,8 @@ import { VirtualScrollSample2Component } from './virtual-scroll-sample2/virtual-
 import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
 
 const routes: Routes = [
-  { path: 'virtualScroll', component: VirtualScrollSampleComponent },
-  { path: 'virtualScroll2', component: VirtualScrollSample2Component }
+  { path: 'virtualScroll', component: VirtualScrollSampleComponent, data: { Title: 'Virtual Scroll 1'} },
+  { path: 'virtualScroll2', component: VirtualScrollSample2Component,data: { Title: 'Virtual Scroll 2'} }
 ];
 
 @NgModule({

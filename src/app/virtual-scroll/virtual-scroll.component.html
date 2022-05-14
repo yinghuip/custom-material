@@ -1,7 +1,7 @@
 
-<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport" #scroller>  
+<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport-cotainer" #scroller>  
     <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
-    <span class="wrapper">
+    <span class="scrollable-content-wrapper">
         <ng-container *cdkVirtualFor="let item of data">
             <ng-container *ngTemplateOutlet="scrollItemTemplate, context: { $implicit: item }"></ng-container>
         </ng-container>  

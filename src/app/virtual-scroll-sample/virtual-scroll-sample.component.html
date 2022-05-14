@@ -1,14 +1,14 @@
 <div class="container">
-    <app-virtual-scroll [data]="items">
+    <app-virtual-scroll [data]="items" [style.--viewport-height]="'500px'">
         <ng-template #header>
             <div class="row">
                 <div class="col-12">
                     virtual scroll sample
-                </div>               
+                </div>
             </div>
         </ng-template>
         <ng-template #scrollItem let-item>
-            <div class="col-3">
+            <div class="col-2">
                 <mat-card style="margin:5px">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
@@ -19,8 +19,10 @@
                         alt="Photo of a Shiba Inu">
                     <mat-card-content>
                         <p>
-                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                            Japan.
+                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                            originally
                             bred for hunting.
                         </p>
                     </mat-card-content>
@@ -31,6 +33,12 @@
                 </mat-card>
             </div>
         </ng-template>
-        <ng-template #footer>end</ng-template>
+        <ng-template #footer>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>end of list</h1>
+                </div>
+            </div>
+        </ng-template>
     </app-virtual-scroll>
 </div>

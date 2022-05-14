@@ -1,19 +1,16 @@
-.example-viewport {
-    min-height: calc(100vh - 100px);
+:root {
+  --viewport-height:  
+}
+
+
+.viewport-cotainer {
+    min-height: var( --viewport-height);
     width: inherit;
   }
 
-  ::ng-deep .cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper .wrapper{
+  ::ng-deep .cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper .scrollable-content-wrapper{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
 
   }
-
-  .example-viewport::-webkit-scrollbar {
-    -ms-overflow-style: none;
-    -moz-scrollbar-width: none;
-    scrollbar-width: none;
-    overflow: -moz-scrollbars-none;
-  }
-  

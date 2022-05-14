@@ -6,11 +6,12 @@
   </mat-toolbar>
   <mat-drawer-container class="mat-container">
     <mat-drawer #drawer>
-      <div *ngFor="let link of routeLinks" class="row g-2">
-        <div class="col-12 text-center">
-          <a routerLink="{{link.Path}}">{{link.Title}}</a>
-        </div>
+      <div class="link">
+        <ng-container *ngFor="let link of routeLinks">
+          <div class="link-item" routerLink="{{link.Path}}" style="width:100%">{{link.Title}}</div>
+        </ng-container>
       </div>
+
     </mat-drawer>
     <mat-drawer-content>
       <router-outlet></router-outlet>

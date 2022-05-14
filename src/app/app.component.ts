@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'custom-material';
   routeLinks:{Title:string,Path:string| undefined }[];
   constructor(private _router: Router){
-   this.routeLinks =  _router.config.map(r=>{ return {Title: `${r.path}`, Path: r.path}});
+   this.routeLinks =  _router.config.map(r=>{ return {Title: `${r.data?.['Title']}`, Path: r.path}});
   }
 }

@@ -12,4 +12,8 @@ export class VirtualScrollSample2Component implements OnInit {
   ngOnInit(): void {
   }
 
+  clickLikeEvent(item: string){
+    alert('click ' + item)
+  }
+
 }
